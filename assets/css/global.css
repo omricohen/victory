@@ -446,7 +446,7 @@ p{
 }
 
 .verde {
-	color: #D3FF4D;
+	color: #D3FF4D!important;
 }
 
 /* Typography */
@@ -950,7 +950,7 @@ img{
     font-weight:600;
     font-size:14px;
 	letter-spacing: 3px;
-	color:var(--main-color);
+	color:var(--main-color)!important;
 	display: inline-block;
 	text-transform:uppercase;
 }
@@ -1088,26 +1088,15 @@ img{
 	background-color: rgba(var(--white-color-rgb), 0.10);
 }
 
-.sec-title.style-three .sec-title_heading span{
-	color: var(--main-color);
-	display: inline-block;
-    background: linear-gradient(to right, var(--main-color) 0%, var(--color-five) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .sec-title.style-four .sec-title_title{
 	padding: 0px 0px;
-	color: #D093E8;
+	color: var(--main-color);
 	text-transform: uppercase;
 }
 
 .sec-title.style-four .sec-title_heading span{
 	color: var(--main-color);
-	font-style: italic;
-    display: inline-block;
-    font-family: 'Lora', serif;
-    text-transform: lowercase;
+	text-transform: uppercase!important;
 }
 
 .sec-title.style-four .sec-title_heading span::before{
