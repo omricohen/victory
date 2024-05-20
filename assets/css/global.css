@@ -73,10 +73,13 @@
 /* Theme Color */
 
 :root {
+	/* #761FE3 in decimal RGB */
+	--accent-text-color: #23ddd7;
+	--accent-text-rgb:35,221,215;
 	
 	/* #761FE3 in decimal RGB */
-	--main-color: #5A68FF;
-	--main-color-rgb:118,31,227;
+	--main-color: #dd0000;
+	--main-color-rgb:221,0,0;
 	
 	/* #141414 in decimal RGB */
 	--color-two: rgb(20,20,20);
@@ -149,8 +152,9 @@
 
 ***/
 
+/* 
 @font-face {
-	font-family: "Noto-Bold";
+	font-family: "Archivo-Variable";
 	src: url(../fonts/NotoSansMono-Bold.ttf);
 }
 @font-face {
@@ -170,6 +174,10 @@
 	src: url(../fonts/JosefinSans-Light.ttf);
 }
 
+@font-face {
+	font-family: "Archivo-Variable";
+	src: url(../fonts/Archivo-VariableFont_wdth\,wght.ttf);
+} */
 
 /* width */
 ::-webkit-scrollbar {
@@ -192,7 +200,7 @@
 }
 
 body {
-	font-family: 'Noto-Bold', sans-serif;
+	font-family: "Archivo", sans-serif;
 	line-height:1.6em;
 	font-weight:400;
 	font-size:14px;
@@ -278,7 +286,7 @@ body {
   opacity: 0;
   top:0;
   position: absolute;
-  font-family: 'Noto-Bold', sans-serif;
+  font-family: "Archivo", sans-serif;
 }
 
 .handle-preloader .animation-preloader .txt-loading .letters-loading{
@@ -288,7 +296,7 @@ body {
   position: relative;
   font-size: 70px;
   line-height: 70px;
-  font-family: 'Noto-Bold', sans-serif;
+  font-family: "Archivo", sans-serif;
   color: transparent;
   -webkit-text-stroke-width: 1px;
   
@@ -397,36 +405,25 @@ h1,h2,h3,h4,h5,h6 {
 	margin:0px;
 	background:none;
 	color:var(--color-four);
-    font-family: 'Noto-Bold', sans-serif;
 	text-transform: uppercase;
+	font-family: "Archivo", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 900;
+	font-style: normal;
+	font-variation-settings:"wdth" 125;
 }
 
-h1,h2,h3 {
-	position:relative;
-	margin:0px;
-	background:none;
-	color:var(--color-four);
-    font-family: 'Noto-Bold', sans-serif;
-}
-
-h4,h5,h6 {
-	position:relative;
-	margin:0px;
-	background:none;
-	color:var(--color-four);
-    font-family: 'Noto-SemiBold', sans-serif;
-}
 
 li, a {
-	font-family: 'Noto-SemiBold', sans-serif;
+	font-family: "Archivo", sans-serif;
 }
 
 i {
-	font-family: 'Noto-Medium', sans-serif;
+	font-family: "Archivo", sans-serif;
 }
 
 p {
-	font-family: 'Josefina-Light', sans-serif;
+	font-family: "Archivo", sans-serif;
 }
 
 input,button,select,textarea{
@@ -454,10 +451,11 @@ p{
 h1{
 	font-size: 46px;
     font-weight: 600;
+	font-weight: 900;
 }
 
 h2{
-	font-weight: 600;
+	font-weight: 900;
 	line-height:58px;
 	font-size:40px;
 }
@@ -1038,7 +1036,7 @@ img{
 }
 
 .sec-title.style-two .sec-title_heading span{
-	color: var(--main-color);
+	color: var(--accent-text-color);
 }
 
 .sec-title.style-two .sec-title_heading span::before{
@@ -1095,7 +1093,7 @@ img{
 }
 
 .sec-title.style-four .sec-title_heading span{
-	color: var(--main-color);
+	color: var(--accent-text-color);
 	text-transform: uppercase!important;
 }
 

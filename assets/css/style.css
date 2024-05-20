@@ -79,6 +79,14 @@
 @import url('odometer-theme-default.css');
 @import url('jquery.bootstrap-touchspin.css');
 
+/* FONT */
+
+/* *{
+
+	font-family: "Archivo", sans-serif;
+} */
+
+
 /*** 
 
 ====================================================================
@@ -206,7 +214,7 @@
     font-weight: 500;
     /* padding: 10px 10px; */
     /* border-radius: 5px; */
-    color: #5A68FF;
+    color: var(--main-color);
     transition: all 900ms ease;
     -moz-transition: all 900ms ease;
     -webkit-transition: all 900ms ease;
@@ -688,7 +696,7 @@
 }
 
 .about-one .sec-title_title{
-	color: #5A68FF;
+	color: var(--main-color);
 }
 
 .about-one_icon{
@@ -871,7 +879,7 @@
 }
 
 .answer-one .sec-title_title {
-    color: #5A68FF;
+    color: var(--main-color);
 }
 
 .answer-one_title-column{
@@ -1868,7 +1876,7 @@
 }
 
 .faq-one .sec-title_title{
-	color: #5A68FF;
+	color: var(--main-color);
 }
 
 .faq-one .sec-title_text{
@@ -2041,11 +2049,18 @@
 }
 
 .social-one_logo img {
-	width: 65%;
+	width: 100%;
 }
 
 .social_icon-box img {
-	max-width: 115px;
+	min-width: 100px;
+	max-width: 200px;
+	max-height: 65px;
+
+}
+
+.social_icon-box-bigger img {
+	min-width: 250px;
 }
 /*** 
 
@@ -2195,7 +2210,7 @@
 }
 
 .news-one .sec-title_title{
-	color: #5A68FF;
+	color: var(--main-color);
 }
 
 .news-one.style-two{
@@ -2861,6 +2876,11 @@
 .livechat{
 	position: relative;
 	padding: 0px 0px 90px;
+	background-image: url('../images/home/Vred.png');
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: top center;
+	padding: 100px 0;
 }
 
 .livechat_image-column{
@@ -2870,10 +2890,10 @@
 
 .livechat_image-outer{
 	position: relative;
-	text-align: center;
+	/* text-align: center; */
 }
 
-.livechat_image-outer::before{
+/* .livechat_image-outer::before{
 	position: absolute;
 	content: '';
 	left: -10px;
@@ -2883,7 +2903,7 @@
 	z-index: 1;
 	background: rgba(var(--color-two-rgb), 1);
 	background: linear-gradient(to top, rgba(var(--color-two-rgb), 1) 0%, rgba(255,255,255,0) 100%);
-}
+} */
 
 .livechat .livechat-layer{
 	position: absolute;
@@ -2979,7 +2999,7 @@
 
 ***/
 
-.counter-one{
+/* .counter-one{
 	position: relative;
 	z-index: 1;
 }
@@ -2987,14 +3007,14 @@
 .counter-one .auto-container{
 	position: relative;
 	max-width: 1650px;
-}
+} */
 
-.counter-one .inner-container{
+/* .counter-one .inner-container{
 	position: relative;
 	border-radius: 10px;
 	padding: 100px 120px 100px;
 	background-color: var(--color-seven);
-}
+} */
 
 /* Counter Block Two */
 
@@ -5486,11 +5506,11 @@
 	overflow: hidden;
 }
 
-.team-block_one-image img{
+/* .team-block_one-image img{
 	position: relative;
 	width: 100%;
 	display: block;
-}
+} */
 
 .team-block_one-content{
 	position: relative;
@@ -5499,8 +5519,9 @@
 
 .team-block_one-title{
 	position: relative;
-	font-size: 24px;
+	font-size: 18pt;
 	line-height: 34px;
+    font-variation-settings: "wdth" 62;
 }
 
 .team-block_one-title a{
@@ -7845,4 +7866,234 @@
 	.investors img {
 		margin-top: 1.5rem;
 	}
+}
+
+
+/* Fullscreen background video setup */
+.video-fullscreen {
+  position: absolute; /* Use fixed to ensure full coverage */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the full area without distortion */
+  z-index: -1; /* Send the video to the back */
+}
+
+/* Container for the hero section to fill the screen and center content */
+.video-hero {
+  position: relative;
+  width: 100%;
+  min-height: 90vh; /* Full viewport height */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden; /* Prevents any overflow from the video */
+  margin-top: 10vh;
+}
+
+/* Container for the text content */
+.hero-container {
+  position: relative;
+  z-index: 10; /* Above the video */
+  text-align: center;
+  color: white; /* Adjust based on your video for better readability */
+  position: static;
+  max-width: 1350px;
+  padding: 0px 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Styling for the main title */
+.hero-title {
+  font-size: 1.5rem; /* Adjust size as needed */
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+/* Styling for the main heading */
+.hero-heading {
+  color: white;
+  font-weight: 900;
+  font-variation-settings: "wdth" 125;
+  font-size: 48pt;
+  max-width: 700px;
+  text-align: left;
+  line-height: 55px;
+}
+
+/* Highlighting specific parts of the heading */
+.highlight {
+  color: var(--accent-text-color); /* Example highlight color */
+}
+
+/* Description paragraph under the heading */
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 800px; /* Limit width for readability */
+  margin: auto;
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity for desired transparency */
+  z-index: 0; /* Above the video but below the text */
+}
+
+
+
+#investors {
+	padding: 100px 0;
+	background: rgb(0,0,0);
+	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 49%, rgba(0,0,0,1) 100%);
+}
+
+#investors .bg-img-container {
+	background: url('../images/home/basketball.png');
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+	padding: 50px 0 100px 0;
+}
+
+#investors h2 {
+    color: white;
+    font-weight: 900;
+    font-variation-settings: "wdth" 125;
+    font-size: 24pt;
+	text-align: center;
+	text-transform: uppercase;
+	padding-bottom: 50px;
+}
+
+.logos-container {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 6vw;
+    row-gap: 6vh;
+}
+.logos-container .social_icon-box {
+	display: block;
+}
+
+.condensedh1 {
+	font-weight: 750;
+    font-variation-settings: "wdth" 62;
+    font-size: 48pt;
+	max-width: 500px;
+}
+
+
+.counter-block_two-count {
+	font-family: "Archivo", sans-serif;
+	font-variation-settings:"wdth" 125;
+	font-weight: 900;
+}
+
+#ecosystem {
+	background: linear-gradient(0deg, rgba(0,0,0,1) 25%, rgba(26,27,73,1) 50%, rgba(0,0,0,1) 75%);
+}
+
+#ecosystem h1::before {
+	content: "THE ECOSYSTEM";
+	font-family: "Archivo", sans-serif;
+	font-variation-settings:"wdth" 62;
+	font-weight: 900;
+	font-size: 180pt;
+	color: #191919;
+	z-index: 0;
+	position: absolute;
+	top: -45pt;
+    left: -21px;
+    text-align: center;
+    line-height: 154pt;
+}
+
+.team-one_arrows {
+	z-index: 10;    
+	position: absolute;
+    top: 45%;
+}
+
+.team-one_team-column {
+	z-index: 10;
+}
+
+.team-one_arrows .team_carousel-prev, .team-one_arrows .team_carousel-next {
+	border-color: var(--accent-text-color);
+}
+
+
+.slide-eco {
+	width: 400px;
+	height: 400px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	overflow: visible;
+}
+#slidenascar {
+	background-image: url('../images/home/nascar.png');
+	row-gap: 7em;
+    justify-content: flex-start;
+	padding-top: 2em;
+}
+#slidenascartitle {
+	width: 100%;
+	color: white;
+	font-size: 38px;
+	font-variation-settings:"wdth" 62;
+}
+
+#slidenascartitle span {
+	color: #00cbbb
+}
+
+#slidenascartitle::before {
+	content: '';
+    display: block;
+    width: 137px;
+    height: 199px;
+    background-image: url(../images/home/nascarleft.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+}
+
+#slidenascartitle::after {
+	content: '';
+	display: block;
+	width: 200px;
+    height: 91px;
+	background-image: url('../images/home/nascarright.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+	right: -15px;
+}
+
+#slidegolf {
+	background-image: url('../images/home/golf.png');
+	row-gap: 5%;
+}
+
+.slide-logo {
+	max-width: 70%;
+	max-height: 3em;
 }
