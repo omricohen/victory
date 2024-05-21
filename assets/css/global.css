@@ -978,7 +978,7 @@ img{
 
 .sec-title_text{
 	line-height:30px; 
-	font-size:17px;
+	font-size:22px;
 	margin-top:20px;
     color:var(--color-three);
 }
@@ -1008,6 +1008,12 @@ img{
 
 .sec-title.centered .separator{
 	margin:0 auto;
+}
+
+
+.service-block_one-text img {
+	margin: 0 auto;
+	display: flex;
 }
 
 /* Style Two */
