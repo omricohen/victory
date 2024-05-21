@@ -2878,9 +2878,10 @@
 	padding: 0px 0px 90px;
 	background-image: url('../images/home/Vred.png');
     background-repeat: no-repeat;
-    background-size: 90%;
-    background-position: top center;
-	padding: 100px 0;
+	background-size: 86%;
+    background-position: bottom center;
+    padding: 100px 0;
+    background-position: bottom;
 }
 
 .livechat_image-column{
@@ -2891,6 +2892,10 @@
 .livechat_image-outer{
 	position: relative;
 	/* text-align: center; */
+}
+
+.livechat_image-outer img {
+	width: 80%;
 }
 
 /* .livechat_image-outer::before{
@@ -7866,8 +7871,11 @@
 	.investors img {
 		margin-top: 1.5rem;
 	}
-}
 
+	.video-hero {
+		margin-top: 0;
+	}
+}
 
 /* Fullscreen background video setup */
 .video-fullscreen {

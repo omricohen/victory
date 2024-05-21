@@ -796,7 +796,45 @@
 }
 
 @media only screen and (max-width: 599px){
-
+	.video-hero {
+		margin-top: 0;
+	}
+	.team-one_arrows {
+		z-index: 100;
+		position: absolute;
+		top: 50%;
+		width: 95%;
+		display: flex;
+		justify-content: space-between;
+	}
+	.team-one_arrows .team_carousel-prev, .team-one_arrows .team_carousel-next {
+		position: relative;
+		width: 40px;
+		height: 40px;
+		font-size: 20px;
+		line-height: 39px;
+		cursor: pointer;
+		margin-right: 10px;
+		border-radius: 50px;
+		display: inline-block;
+		color: var(--white-color);
+		transition: all 300ms ease;
+		-moz-transition: all 300ms ease;
+		-webkit-transition: all 300ms ease;
+		-ms-transition: all 300ms ease;
+		-o-transition: all 300ms ease;
+		z-index: 100;
+		border: 1px solid var(--main-color);
+	}
+	.livechat_image-outer img {
+		width: 80%;
+		margin: 0 auto;
+		display: flex;
+	}
+	.slide-eco {
+		width: 80%;
+		margin: 0 auto;
+	}
 	.main-header.header-style-three .main-header_buttons,
 	.answer-one_scroll-content::before,
 	.answer-one_author-inner::before,
