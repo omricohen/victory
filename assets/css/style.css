@@ -3035,6 +3035,7 @@
 	border-radius: 8px;
 	background: rgba(var(--white-color-rgb), 0.10);
     background: linear-gradient(to bottom, rgba(var(--white-color-rgb), 0.10) 0%, var(--color-two) 100%);
+	min-height: 206px;
 }
 
 .counter-block_two-inner::before{
@@ -3053,7 +3054,7 @@
 .counter-block_two-count{
 	position: relative;
 	line-height: 1em;
-	font-size: 48px;
+	font-size: 39px;
 	font-weight: 600;
 	color: var(--main-color);
 	transition:all 500ms ease;

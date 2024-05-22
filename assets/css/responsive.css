@@ -793,9 +793,22 @@
 		margin-left: 12px;
 	}
 
+	body {
+        cursor: none; /* Oculta el cursor en tamaños móviles */
+    }
+
 }
 
 @media only screen and (max-width: 599px){
+
+	.hero-heading {
+		font-size: 40pt;
+	}
+
+	body {
+        cursor: none; /* Oculta el cursor en tamaños móviles */
+    }
+
 	.video-hero {
 		margin-top: 0;
 	}
@@ -991,7 +1004,7 @@
 	}
 
 	h1{
-    	line-height: 40px;
+    	line-height: 58px;
     	font-size: 30px;
   	}
 
@@ -1000,10 +1013,6 @@
     	font-size: 30px;
   	}
 
-	.service-block_two-inner,
-	.service-block_one-inner{
-		padding: 20px 20px;
-	}
 
 	.testimonial-one .inner-container,
 	.choose-one .inner-container{
