@@ -72,11 +72,6 @@
 	.story-one_content-outer{
 		padding: 0px 0px;
 	}
-
-	.header-three-socials{
-		display: none;
-	}
-
 }
 
 @media only screen and (max-width: 1300px){
@@ -800,9 +795,20 @@
 }
 
 @media only screen and (max-width: 599px){
+
+	.header-three-socials a {
+		margin-left: 0;
+		margin-top: 10px;
+	} 
+
+	.footer-bottom .d-flex {
+		display: block!important;
+	}
 	.getGame {
 		font-size: 16px;
 		bottom: 25px;
+		min-width: 256px;
+		text-align: center;
 	}
 	.hero-heading {
 		font-size: 40pt;

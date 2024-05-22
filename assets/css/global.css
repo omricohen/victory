@@ -70,6 +70,18 @@
 	color:var(--main-color);
 }
 
+
+.logo-box {
+	width: 100% !important;
+    /* background: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-box .logo {
+	width: 200px;
+}
+
 /* Theme Color */
 
 :root {
@@ -1019,6 +1031,12 @@ img{
 .background-black {
 	background-color: black;
 }
+
+.header-three-socials {
+	position: relative!important;
+	left: 0!important;
+}
+
 /* Style Two */
 
 .sec-title.style-two .sec-title_title{
