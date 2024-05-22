@@ -7923,13 +7923,13 @@
 
 /* Styling for the main heading */
 .hero-heading {
-  color: white;
-  font-weight: 900;
-  font-variation-settings: "wdth" 125;
-  font-size: 48pt;
-  max-width: 700px;
-  text-align: left;
-  line-height: 55px;
+	color: white;
+	font-weight: 900;
+	font-variation-settings: "wdth" 125;
+	font-size: 60pt;
+	max-width: 700px;
+	text-align: left;
+	line-height: 84px;
 }
 
 /* Highlighting specific parts of the heading */
@@ -8105,4 +8105,13 @@
 .slide-logo {
 	max-width: 70%;
 	max-height: 3em;
+}
+
+#slideangel img, #slidestardust img, #slidesweb3 img {
+	width: 95%;
+}
+
+#slideseternal img {
+	margin-top: 1.3rem;
+    width: 94%;
 }

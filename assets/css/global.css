@@ -1016,6 +1016,9 @@ img{
 	display: flex;
 }
 
+.background-black {
+	background-color: black;
+}
 /* Style Two */
 
 .sec-title.style-two .sec-title_title{

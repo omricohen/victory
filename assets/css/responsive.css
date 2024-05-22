@@ -803,6 +803,7 @@
 
 	.hero-heading {
 		font-size: 40pt;
+		line-height: 54px;
 	}
 
 	body {
@@ -845,7 +846,6 @@
 		display: flex;
 	}
 	.slide-eco {
-		width: 80%;
 		margin: 0 auto;
 	}
 	.main-header.header-style-three .main-header_buttons,
@@ -985,10 +985,18 @@
 		padding-right: 0px;
 	}
 
+	.logos-container .social_icon-box {
+		display: block;
+		margin: 0 10px;
+	}
+
 }
 
 @media only screen and (max-width: 479px) {
-	
+	.logos-container .social_icon-box {
+		display: block;
+		margin: 0 10px;
+	}
 	.sec-title_heading br,
 	.slider-one_graph,
 	.cta-icon_one,
