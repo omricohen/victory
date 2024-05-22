@@ -8115,3 +8115,25 @@
 	margin-top: 1.3rem;
     width: 94%;
 }
+
+.getGame {
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: black;
+	padding: 1rem 1.3rem;
+	-webkit-box-shadow: 2px 4px 30px 0px rgba(0,0,0,0.52);
+	-moz-box-shadow: 2px 4px 30px 0px rgba(0,0,0,0.52);
+	box-shadow: 2px 4px 30px 0px rgba(0,0,0,0.52);
+	font-size: 20px;
+}
+
+.getGame img {
+	width: 30px;
+	margin-right: 1rem;
+}
+
+.getGame:hover {
+	color: aqua;
+}
