@@ -7938,7 +7938,11 @@
 }
 
 .highlight-red {
-	color: var(--main-color);
+	color: var(--main-color)!important;
+}
+
+.odometer.odometer-auto-theme, .odometer.odometer-theme-default {
+    vertical-align: top !important;
 }
 
 /* Description paragraph under the heading */
@@ -8140,6 +8144,10 @@
     width: 34px;
     margin-right: 1rem;
     border-radius: 34px;
+}
+
+.bold {
+	font-weight: bold;
 }
 
 .getGame:hover {
