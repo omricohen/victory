@@ -7926,7 +7926,7 @@
 	color: white;
 	font-weight: 900;
 	font-variation-settings: "wdth" 125;
-	font-size: 60pt;
+	font-size: 55pt;
 	max-width: 700px;
 	text-align: left;
 	line-height: 84px;
@@ -7935,6 +7935,10 @@
 /* Highlighting specific parts of the heading */
 .highlight {
   color: var(--accent-text-color); /* Example highlight color */
+}
+
+.highlight-red {
+	color: var(--main-color);
 }
 
 /* Description paragraph under the heading */
@@ -8126,12 +8130,16 @@
 	-webkit-box-shadow: 2px 4px 30px 0px rgba(0,0,0,0.52);
 	-moz-box-shadow: 2px 4px 30px 0px rgba(0,0,0,0.52);
 	box-shadow: 2px 4px 30px 0px rgba(0,0,0,0.52);
-	font-size: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 1.8rem;
+    text-transform: uppercase;
 }
 
 .getGame img {
-	width: 30px;
-	margin-right: 1rem;
+    width: 34px;
+    margin-right: 1rem;
+    border-radius: 34px;
 }
 
 .getGame:hover {
