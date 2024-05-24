@@ -95,6 +95,10 @@
 
 ***/
 
+.three-item_carousel .swiper-slide {
+	height: 458px;
+}
+
 .slider-one{
 	position:relative;
 }
@@ -109,6 +113,8 @@
 	z-index: 10;
 	clip-path: polygon(15% 60%, 100% 0, 100% 100%, 0 100%, 0 0);
 }
+
+
 
 .slider-one .swiper-slide{
 	position:relative;
@@ -517,6 +523,7 @@
 	position: relative;
 	overflow: hidden;
 	border-radius: 8px;
+	height: 100%;
 	background: rgba(var(--white-color-rgb), 0.10);
     background: linear-gradient(to bottom, rgba(var(--white-color-rgb), 0.10) 0%, var(--color-two) 100%);
 }
