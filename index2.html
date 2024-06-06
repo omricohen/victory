@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Victory Chain -- The Blockchain built for SportsFi</title>
+<!-- Stylesheets -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/meanmenu.min.css" rel="stylesheet">
+<link href="assets/css/responsive.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+
+<link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+<link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+	 function injectOneSignalStyles() {
+    // Style for the dialog
+    var dialog = document.getElementById('onesignal-slidedown-dialog');
+    if (dialog) {
+        dialog.setAttribute('style', 'background: black !important; color: white !important; border: 1px solid #333 !important; font-family: \'Josefina-Light\', sans-serif !important;');
+    }
+
+    // Style for the message within the body
+    var message = document.getElementById('slidedown-body-message');
+    if (message) {
+        message.setAttribute('style', 'color: white !important;');
+    } else {
+        var messageClasses = document.getElementsByClassName('slidedown-body-message');
+        Array.from(messageClasses).forEach(function(element) {
+            element.setAttribute('style', 'color: white !important;');
+        });
+    }
+
+    // Style for the capture container
+    var captureContainer = document.getElementById('channel-capture-container');
+    if (captureContainer) {
+        captureContainer.setAttribute('style', 'background: black !important;');
+    } else {
+        var captureContainers = document.getElementsByClassName('channel-capture-container');
+        Array.from(captureContainers).forEach(function(element) {
+            element.setAttribute('style', 'background: black !important;');
+        });
+    }
+
+    // Style for the email input with validation element
+    var emailValidationElement = document.getElementById('email-input-with-validation-element');
+    if (emailValidationElement) {
+        emailValidationElement.setAttribute('style', 'background: black !important; color: white !important;');
+		var label = emailValidationElement.querySelector('label');
+		label.setAttribute('style', 'color: white');
+		var input = emailValidationElement.querySelector('input');
+		input.setAttribute('style', 'color:black !important;font-weight: 600 !important;');
+    }
+
+	
+    // Style for the allow button
+    var allowButton = document.getElementById('onesignal-slidedown-allow-button');
+    if (allowButton) {
+        allowButton.setAttribute('style', 'font-weight: 500 !important; background: #5A68FF !important; padding: .4em 1.25em;');
+    }
+
+    // Style for the cancel button
+    var cancelButton = document.getElementById('onesignal-slidedown-cancel-button');
+    if (cancelButton) {
+        cancelButton.setAttribute('style', 'padding: .4em 1.25em; font-weight: 400 !important; color: #fff !important; background: rgba(90, 104, 255, 0.5) !important;');
+    }
+}
+
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(function(OneSignal) {
+    OneSignal.init({
+      appId: "16f01128-2965-4871-b620-0bf98716487a",
+      safari_web_id: "web.onesignal.auto.1b1338f0-ae7a-49c0-a5a1-0112be9b9bea",
+      notifyButton: {
+        enable: false,
+      },
+	  promptOptions: {
+      slidedown: {
+        prompts: [
+          {
+            type: "email",
+            autoPrompt: true,
+            text: {
+              emailLabel: "Enter Email Address",
+              smsLabel: "Insert Phone Number",
+              acceptButton: "Submit",
+              cancelButton: "No Thanks",
+              actionMessage: "Stay winning by keeping up with the latest announcements from Victory Chain.",
+              updateMessage: "Update your subscription preferences.",
+              confirmMessage: "Thank You!",
+              positiveUpdateButton: "Save Preferences",
+              negativeUpdateButton: "Cancel",
+            },
+            delay: {
+              pageViews: 0,
+              timeDelay: 7
+            },
+          },
+		]
+	  }
+	}
+    });
+	OneSignal.Slidedown.addEventListener("slidedownShown", injectOneSignalStyles);
+  });
+</script>
+</head>
+
+<body>
+
+<div class="page-wrapper">
+	
+	<!-- Cursor -->
+	<div class="cursor"></div>
+	<div class="cursor-follower"></div>
+	<!-- Cursor End -->
+
+	
+	<!-- Main Header -->
+	<header class="main-header header-style-one">
+		
+		<!-- Header Lower -->
+		<div class="header-lower">
+			<div class="auto-container">
+				<div class="inner-container">
+					<div class="d-flex justify-content-between align-items-center flex-wrap">
+						
+						<div class="logo-box">
+							<div class="logo"><a href="index.html"><img src="assets/images/victoryLong.png" alt="" title=""></a></div>
+							<div class="header-three-socials">
+								<a href="https://twitter.com/VictoryChain_io"><i class="fa-brands fa-twitter"></i></a>
+								<a href="https://discord.gg/Zyr4BdxShA"><i class="fa-brands fa-discord"></i></a>
+							</div>
+						</div>
+						<!--
+						<div class="nav-outer d-flex flex-wrap">
+							 Main Menu 
+							<nav class="main-menu navbar-expand-md">
+								<div class="navbar-header">
+										
+									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+								</div>
+								
+								<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent" style="display: none!important;">
+									<ul class="navigation clearfix">
+										<li class="dropdown"><a href="technology.html">Technology</a>
+											
+										</li>
+										<li class="dropdown"><a href="about.html">About</a>
+											
+										</li>
+										<li class="dropdown"><a href="governance.html">Governance</a>
+				
+										</li>
+										<li class="dropdown"><a href="partnerships.html">Partnerships</a>
+											
+										</li>
+									</ul>
+								</div>
+							</nav>
+						</div>
+						Main Menu End-->
+
+						<div class="outer-box d-flex align-items-center flex-wrap">
+							<!-- Mobile Navigation Toggler -->
+							<div class="mobile-nav-toggler" style="display: none;">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--End Header Lower-->
+		
+		<!-- Mobile Menu  -->
+		<div class="mobile-menu">
+			<div class="menu-backdrop"></div>
+			<div class="close-btn"><span class="icon fa-solid fa-xmark fa-fw"></span></div>
+			
+			<nav class="menu-box">
+				<div class="nav-logo"><a href="index.html"><img src="assets/images/mobile-logo.svg" alt="" title=""></a></div>
+				<div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+			</nav>
+		</div>
+		<!-- End Mobile Menu -->
+	
+	</header>
+	<!-- End Main Header -->
+	
+	<!-- Slider One -->
+	<!-- Slider One -->
+<!-- Fullscreen Video Hero Section -->
+<section class="video-hero">
+	<a href="#investors" class="getGame"><img src="assets/images/home/victorySecondary.jpg" alt="">Get In The Game</a>
+  <video autoplay muted loop id="videoBackground" class="video-fullscreen">
+    <source src="assets/images/background/victory_bg_web.mp4" type="video/mp4">
+  </video>
+  <!-- <div class="video-overlay"></div> -->
+  <div class="hero-container">
+    <div class="hero-content ">
+      <h1 class="hero-heading">PRO SPORTS WHERE <br><span class="highlight-red background-black">THE FANS ARE IN CONTROL</span></h1>
+      <p class="hero-description"></p>
+	  
+    </div>
+  </div>
+</section>
+<!-- Team One -->
+<section class="team-one" id="ecosystem">
+	<div class="auto-container">
+		<div class="row clearfix">
+			<!-- Title Column -->
+			<div class="team-one_title-column col-lg-4 col-md-12 col-sm-12">
+				<div class="team-one_title-outer">
+					<!-- Sec Title -->
+					<div class="sec-title style-four">
+						<h1 class="sec-title_heading">The <span class="highlight-red background-black">headlines</span></h1>
+						<p>Here’s what’s going on at Fan Controlled Sports</p>
+					</div>
+					<!-- If we need navigation buttons -->
+					<div class="team-one_arrows">
+						<div class="team_carousel-prev fa-solid fa-angle-left fa-fw"></div>
+						<div class="team_carousel-next fa-solid fa-angle-right fa-fw"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Team Column -->
+			<div class="team-one_team-column col-lg-8 col-md-12 col-sm-12">
+				<div class="team-one_team-outer">
+					<div class="team-carousel swiper-container">
+						<div class="swiper-wrapper">
+			
+							<!-- Slide -->
+							<div class="swiper-slide">
+								<!-- Team Block One -->
+								<div class="team-block_one">
+									<div class="team-block_one-inner">
+										<div class="team-block_one-image slide-eco" id="slidenascar">
+												<img src="./assets/images/home/nascarlogo.png" alt="">
+												<h4 id="slidenascartitle"><span>500k</span><br> LIVE FANS</h4>
+										</div>
+										<div class="team-block_one-content">
+											<h4 class="team-block_one-title"><a href="team-detail.html">NASCAR + FAN CONTROLLED RACING</a></h4>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide -->
+							<div class="swiper-slide">
+								<!-- Team Block One -->
+								<div class="team-block_one">
+									<div class="team-block_one-inner">
+										<div class="team-block_one-image slide-eco" id="slidegolf">
+												<img src="./assets/images/investors/verizon.png" alt="" class="slide-logo">
+												<img src="./assets/images/investors/ubisoft.png" alt="" class="slide-logo">
+												<img src="./assets/images/investors/VaynerMedia.png" alt="" class="slide-logo">
+												<img src="./assets/images/investors/Catterton.png" alt="" class="slide-logo">
+												<img src="./assets/images/icons/coinbase.png" alt="" class="slide-logo">
+										</div>
+										<div class="team-block_one-content">
+											<h4 class="team-block_one-title"><a href="team-detail.html">STRATEGIC INVESTORS</a></h4>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide -->
+							<div class="swiper-slide">
+								<!-- Team Block One -->
+								<div class="team-block_one">
+									<div class="team-block_one-inner">
+										<div class="team-block_one-image slide-eco" id="slideangel">
+											<img src="./assets/images/home/angelInvestors.png" alt="">
+										</div>
+										<div class="team-block_one-content">
+											<h4 class="team-block_one-title"><a href="team-detail.html">ANGEL INVESTORS</a></h4>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide -->
+							<div class="swiper-slide">
+								<!-- Team Block One -->
+								<div class="team-block_one">
+									<div class="team-block_one-inner">
+										<div class="team-block_one-image slide-eco" id="slidestardust">
+											<img src="./assets/images/home/stardust.png" alt="">
+										</div>
+										<div class="team-block_one-content">
+											<h4 class="team-block_one-title"><a href="team-detail.html">STARDUST CUSTODIAL WALLETS</a></h4>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide -->
+							<div class="swiper-slide">
+								<!-- Team Block One -->
+								<div class="team-block_one">
+									<div class="team-block_one-inner">
+										<div class="team-block_one-image slide-eco" id="slideseternal">
+											<img src="./assets/images/home/eternal.png" alt="">
+										</div>
+										<div class="team-block_one-content">
+											<h4 class="team-block_one-title"><a href="team-detail.html">ETERNAL.GG COLLECTIBLE MOMENTS</a></h4>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide -->
+							<div class="swiper-slide">
+								<!-- Team Block One -->
+								<div class="team-block_one">
+									<div class="team-block_one-inner">
+										<div class="team-block_one-image slide-eco" id="slidesweb3">
+											<img src="./assets/images/home/web3venture.png" alt="">
+										</div>
+										<div class="team-block_one-content">
+											<h4 class="team-block_one-title"><a href="team-detail.html">WEB 3 & VENTURE INVESTORS</a></h4>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- End Team One -->
+	<!-- End Main Slider Section -->
+
+
+<!-- first layer -->
+<section class="livechat">
+	<div class="auto-container">
+		<div class="row clearfix">
+			
+			<!-- Image Column -->
+			<div class="livechat_image-column col-lg-6 col-md-12 col-sm-12">
+				<div class="livechat_image-outer">
+					<img src="./assets/images/home/Phone2.gif" alt="" />
+					<!-- <video autoplay="autoplay" controls loop width="auto" height="800px">
+						<source src="./assets/images/home/LiveChat.gif" type="video/gif">
+						Your browser does not support the video tag.
+					  </video> -->
+				</div>
+			</div>
+
+			<!-- Content Column -->
+			<div class="livechat_content-column col-lg-6 col-md-12 col-sm-12">
+				<div class="livechat_content-outer">
+					<!-- Sec Title -->
+					<div class="sec-title style-two title-anim">
+						<h1 class="sec-title_heading">Join the community of millions of fans who call the shots for their <span class="highlight-red background-black">FAVORITE TEAM</span></h1>
+						<div class="sec-title_text">Prove you’ve got what it takes as you earn CTRL Tokens  <span class="bold"> and climb the Fan Leaderboard.</span></div>
+					</div>
+					
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="auto-container">
+		<div class="inner-container">
+			<!-- Sec Title -->
+			<div class="sec-title style-two centered">
+				<h2 class="sec-title_heading">THE WINNING NUMBERS</h2>
+			</div>
+			<div class="row clearfix">
+
+				<!-- Counter Block Two -->
+				<div class="counter-block_two col-lg-4 col-md-6 col-sm-6">
+					<div class="counter-block_two-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="color-layer"></div>
+						<div class="counter-block_two-count"><span class="odometer" data-count="30"></span><i>M+</i></div>
+						<div class="counter-block_two-text">Live views on Game Days.</div>
+					</div>
+				</div>
+
+				<!-- Counter Block Two -->
+				<div class="counter-block_two col-lg-4 col-md-6 col-sm-6">
+					<div class="counter-block_two-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="color-layer"></div>
+						<div class="counter-block_two-count"><span class="odometer" data-count="30"></span><i>M VIEWERS</i></div>
+						<div class="counter-block_two-text">In just the first two seasons of Fan Controlled Football built on Victory Chain, tens of millions of fans tuned in as live viewers of the interactive competition globally.	</div>
+					</div>
+				</div>
+
+				<!-- Counter Block Two -->
+				<div class="counter-block_two col-lg-4 col-md-6 col-sm-6">
+					<div class="counter-block_two-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="color-layer"></div>
+						<div class="counter-block_two-count"><span class="odometer" data-count="25"></span><i>K NFTs</i></div>
+						<div class="counter-block_two-text">Through the initial drop and activation, over 20k wallets have been connected and more than 25k collectible and utility NFTs purchased.</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Counter One -->
+	<!-- Assistance One -->
+	<section class="assistance-one">
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title style-two centered">
+				<h2 class="sec-title_heading">THE BLOCKCHAIN BUILT FOR SPORTSFI</h2>
+			</div>
+			<div class="three-item_carousel swiper-container">
+				<div class="swiper-wrapper">
+	
+					<!-- Slide -->
+					<div class="swiper-slide">
+						<div class="service-block_one-inner">
+							<div class="service-block_one-icon">
+								<img src="assets/images/icons/core_1.svg" alt="">
+							</div>
+							<h5 class="service-block_one-heading"><a href="#.html">Picks and Polls</a></h5>
+							<div class="service-block_one-text">
+								<ul>
+									<li>Fans call the shots for Live pro sports</li>
+									<li>Make decisions to help your team win</li>
+									<li>Wager on your picks</li>
+								</ul>
+								<img src="./assets/images/home/RealTimeData.png" alt="">
+							</div>
+							<div class="lower-box d-flex justify-content-between align-items-center flex-wrap">						
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide -->
+					<div class="swiper-slide">
+						<div class="service-block_one-inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="service-block_one-icon">
+								<img src="assets/images/icons/core_2.svg" alt="">
+							</div>
+							<h5 class="service-block_one-heading"><a href="#.html">Fan Run DAOs To Manage Teams</a></h5>
+							<div class="service-block_one-text">
+								<ul>
+									<li>Compete to become the top fan</li>
+									<li>Win awesome rewards</li>
+									<li>Lead your team to victory</li>
+								</ul>
+								<img src="./assets/images/home/LOGOS.png" alt=""></div>
+							<div class="lower-box d-flex justify-content-between align-items-center flex-wrap">							
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide -->
+					<div class="swiper-slide">
+						<div class="service-block_one-inner wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="service-block_one-icon">
+								<img src="assets/images/icons/core_3.svg" alt="">
+							</div>
+							<h5 class="service-block_one-heading"><a href="#.html">NFTs Built for Sports</a></h5>
+							<div class="service-block_one-text">
+								<ul>
+									<li>Playable Fanvatars</li>
+									<li>Unlock rare collectibles</li>
+									<li>Customize your gear</li>
+								</ul>
+								<img src="./assets/images/home/NFTs.png" alt=""></div>
+							<div class="lower-box d-flex justify-content-between align-items-center flex-wrap">
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide -->
+					<div class="swiper-slide">
+						<div class="service-block_one-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="service-block_one-icon">
+								<img src="assets/images/icons/core_4.svg" alt="">
+							</div>
+							<h5 class="service-block_one-heading"><a href="#.html">Probablistic Sampling</a></h5>
+							<div class="service-block_one-text"><p>By creating faster, more efficient blockchain transactions with our probabilistic sampling mechanism, Victoy Chain ensures scalability during the seasonal and live event volume spikes that occur in sports, without compromising security.</p></div>
+							<div class="lower-box d-flex justify-content-between align-items-center flex-wrap">
+							</div>
+						</div>
+					</div>
+					<!-- Slide -->
+					<div class="swiper-slide">
+						<div class="service-block_one-inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="service-block_one-icon">
+								<img src="assets/images/icons/core_5.svg" alt="">
+							</div>
+							<h5 class="service-block_one-heading"><a href="#.html">Empowering Developers</a></h5>
+							<div class="service-block_one-text"><p>Harness the power of sports data with Victory Chain's comprehensive, real-time API, enabling the creation of innovative apps and platforms that transform fan experiences.</p></div>
+							<div class="lower-box d-flex justify-content-between align-items-center flex-wrap">
+							</div>
+						</div>
+					</div>
+					<!-- Slide -->
+					<div class="swiper-slide">
+						<div class="service-block_one-inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="service-block_one-icon">
+								<img src="assets/images/icons/core_6.svg" alt="">
+							</div>
+							<h5 class="service-block_one-heading"><a href="#.html">Network Of Oracles</a></h5>
+							<div class="service-block_one-text"><p>Gain access to accurate, tamper-proof sports data from a decentralized network of oracles, ensuring reliability and transparency for all transactions and interactions.</p></div>
+							<div class="lower-box d-flex justify-content-between align-items-center flex-wrap">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- If we need pagination -->
+				<div class="three-item_carousel-pagination"></div>
+
+			</div>
+
+		</div>
+	</section>
+	<!-- End Assistance One -->
+
+	<!-- INVESTORS  -->
+	<section id="investors">
+		<div class="bg-img-container">
+			<div class="auto-container">
+				<h2>our INVESTORS</h2>
+				<div class="logos-container ">
+					<!-- Icon -->
+					<div class="social_icon-box">
+						<a href="#">
+							<img src="assets/images/investors/verizon.png" alt="" />
+						</a>
+					</div>
+					<!-- Icon -->
+					<div class="social_icon-box social_icon-box-bigger">
+						<a href="#">
+							<img src="assets/images/investors/delphi.png" class="bigger" alt="" />
+						</a>
+					</div>
+					<!-- Icon -->
+					<div class="social_icon-box">
+						<a href="#">
+							<img src="assets/images/icons/coinbase.png" alt="" />
+						</a>
+					</div>
+					
+					<!-- Icon -->
+					<div class="social_icon-box social_icon-box-bigger">
+						<a href="#">
+							<img src="assets/images/icons/readyplayer.png" alt="" />
+						</a>
+					</div>
+					<!-- Icon -->
+					<div class="social_icon-box">
+						<a href="#">
+							<img src="assets/images/investors/Catterton.png" alt="" />
+						</a>
+					</div>
+					<!-- Icon -->
+					<div class="social_icon-box">
+						<a href="#">
+							<img src="assets/images/investors/6thman.png" alt="" />
+						</a>
+					</div>
+					<!-- Icon -->
+					<!-- Icon -->
+					<div class="social_icon-box">
+						<a href="#">
+							<img src="assets/images/investors/DeFi-Alliance.png" alt="" />
+						</a>
+					</div>
+					<!-- Icon -->
+					<div class="social_icon-box">
+						<a href="#">
+							<img src="assets/images/investors/spartan.png" alt="" />
+						</a>
+					</div>
+					<div class="social_icon-box">
+						<a href="#">
+							<img src="assets/images/investors/gemini.png" alt="" />
+						</a>
+					</div>
+					<div class="social_icon-box">
+						<a href="#">
+							<img src="assets/images/investors/talis_logo.svg" alt="" />
+						</a>
+					</div>
+					<div class="social_icon-box">
+						<a href="#">
+							<img src="assets/images/icons/goldentree.png" alt="" />
+						</a>
+					</div>
+					<!-- Icon -->
+					<div class="social_icon-box">
+						<a href="#">
+							<img src="assets/images/investors/ubisoft.png" alt="" />
+						</a>
+					</div>
+					<!-- Icon -->
+					<div class="social_icon-box social_icon-box-bigger">
+						<a href="#">
+							<img src="assets/images/investors/lightspeed.svg" alt="" />
+						</a>
+					</div>
+					<!-- Icon -->
+					<div class="social_icon-box">
+						<a href="#">
+							<img src="assets/images/icons/animoca.png" class="bigger" alt="" />
+						</a>
+					</div>
+					<!-- Icon -->
+					<div class="social_icon-box social_icon-box-bigger">
+						<a href="#">
+							<img src="assets/images/investors/VaynerMedia.png" alt="" />
+						</a>
+					</div>
+					<div class="social_icon-box social_icon-box-bigger">
+						<a href="#">
+							<img src="assets/images/investors/correlation.png" alt="" />
+						</a>
+					</div>
+					<!-- Icon -->
+					<div class="social_icon-box">
+						<a href="#">
+							<img src="assets/images/investors/Taisu.png" alt="" />
+						</a>
+					</div>
+					<!-- Icon -->
+					<div class="social_icon-box">
+						<a href="#">
+							<img src="assets/images/investors/NGC.png" alt="" />
+						</a>
+					</div>
+					<!-- Icon -->
+					<div class="social_icon-box ">
+						<a href="#">
+							<img src="assets/images/investors/dialectic.png" alt="" />
+						</a>
+					</div>
+					<!-- Icon -->
+					<div class="social_icon-box bigger">
+						<a href="#">
+							<img src="assets/images/investors/wagmi.png" alt="" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End INVESTORS  -->
+	<!-- Main Footer -->
+	<footer class="main-footer">
+		<div class="auto-container">
+			<div class="inner-container">
+				<!-- Widgets Section -->
+				<div class="widgets-section" style="display: none;">
+					<div class="row clearfix">
+						<div class="big-column col-lg-12 col-md-12 col-sm-12">
+							<div class="footer-logo"><a href="index.html"><img src="assets/images/token.png" alt="" title=""></a></div>
+						</div>
+						<!-- Big Column -->
+						<div class="big-column col-lg-10 col-md-12 col-sm-12">
+							<div class="footer-lists_outer">
+								<div class="row clearfix">
+									<!-- Column -->
+									<div class="column col-lg-5 col-md-4 col-sm-6">
+										<h5 class="footer-title">Others</h5>
+										<ul class="footer-pages_list">
+											<li><a href="#">Sports</a></li>
+											<li><a href="#">Blog Posts</a></li>
+										</ul>
+									</div>
+									<!-- Column -->
+									<div class="column col-lg-3 col-md-4 col-sm-6">
+										<h5 class="footer-title">resources</h5>
+										<ul class="footer-pages_list">
+											<li><a href="#">Blog</a></li>
+											<li><a href="#">FAQs</a></li>
+											<li><a href="#">Whitepaper</a></li>
+											<li><a href="#">Services</a></li>
+										</ul>
+									</div>
+									<!-- Column -->
+									<div class="column col-lg-4 col-md-4 col-sm-6">
+										<h5 class="footer-title">about us</h5>
+										<ul class="footer-pages_list">
+											<li><a href="#">Our story</a></li>
+											<li><a href="#">Team</a></li>
+											<li><a href="#">Careers</a></li>
+											<li><a href="#">Testimonials</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="big-column col-lg-2 col-md-12 col-sm-12">
+							<!-- Social Box -->
+							<div class="footer-social_box">
+								<a href="#"><i class="fa-brands fa-x"></i></a>
+								<a href="#"><i class="fa-brands fa-youtube"></i></a>
+								<a href="#"><i class="fa-brands fa-instagram"></i></a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="auto-container">
+				<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
+					<div class="footer-copyright">&copy; 2024 <a href="index.html">Victory Chain.</a> All rights reserved.</div>
+					<div class="header-three-socials">
+						<a href="https://twitter.com/VictoryChain_io"><i class="fa-brands fa-twitter"></i></a>
+						<a href="https://discord.gg/Zyr4BdxShA"><i class="fa-brands fa-discord"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+<div class="progress-wrap">
+	<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+		<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+	</svg>
+</div>
+
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/appear.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/particles.js"></script>
+<script src="assets/js/tilt.jquery.min.js"></script>
+<script src="assets/js/jquery.paroller.min.js"></script>
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/backtotop.js"></script>
+<script src="assets/js/odometer.js"></script>
+<script src="assets/js/parallax-scroll.js"></script>
+
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/SplitText.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/ScrollToPlugin.min.js"></script>
+<script src="assets/js/ScrollSmoother.min.js"></script>
+
+<script src="assets/js/touchspin.js"></script>
+<script src="assets/js/jquery.marquee.min.js"></script>
+<script src="assets/js/magnific-popup.min.js"></script>
+<script src="assets/js/nav-tool.js"></script>
+<script src="assets/js/jquery-ui.js"></script>
+<script src="assets/js/element-in-view.js"></script>
+<script src="assets/js/script.js"></script>
+
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+</body>
+</html>
