@@ -8376,3 +8376,10 @@
   border-color: rgba(255, 255, 255, 0.1);
   color: #ffffff !important;
 }
+
+.revenue-chart {
+  background: rgba(90,104,255,0.1);
+  border-radius: 15px;
+  padding: 30px;
+  height: 100%;
+}
