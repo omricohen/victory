@@ -8169,14 +8169,14 @@
 }
 
 .timeline-content h3 {
-	color: #5A68FF;
+	color: #FF3E3E;
 }
 
 .timeline-container::after {
   content: '';
   position: absolute;
   width: 6px;
-  background-color: #5A68FF;
+  background-color: #FF3E3E;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -8196,7 +8196,7 @@
   width: 25px;
   height: 25px;
   right: -17px;
-  background-color: #5A68FF;
+  background-color: #FF3E3E;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
@@ -8226,7 +8226,7 @@
   position: absolute;
   width: 40px;
   height: 40px;
-  background-color: #5A68FF;
+  background-color: #FF3E3E;
   top: 0;
   border-radius: 50%;
   display: flex;
@@ -8252,7 +8252,7 @@
 }
 
 .utility-icon {
-  color: #5A68FF;
+  color: #FF3E3E;
   margin-bottom: 15px;
 }
 
@@ -8363,7 +8363,7 @@
 }
 
 .allocation-table .table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.128);
   color: #ffffff;
 }
 
