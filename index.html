@@ -129,56 +129,78 @@
 	<header class="main-header header-style-one">
 		
 	<!-- Header Lower -->
+
   <div class="header-lower">
-    <div class="auto-container">
+    <div class="container-fluid">
       <div class="inner-container">
-        <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <div class="d-flex justify-content-between align-items-center flex-wrap w-100">
           
           <div class="logo-box">
             <div class="logo"><a href="index.html"><img src="assets/images/victoryLong.png" alt="" title=""></a></div>
-            <nav class="main-menu navbar-expand-md">
-              <div class="navbar-header">
+          </div>        
+            <div class="d-flex align-items-center nav-outer flex-grow-1 justify-content-center">
+              <!-- Main Menu -->
+              <nav class="main-menu navbar-expand-md">
+                <div class="navbar-header">
+                  <!-- Toggle Button -->    	
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                   </button>
-              </div>
-              
-              <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                </div>
+                
+                <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
                   <ul class="navigation clearfix">
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="tokenomics.html">Tokenomics</a></li>
-                      <li><a href="control-protocol.html">Control Protocol</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tokenomics.html">Tokenomics</a></li>
+                    <li><a href="control-protocol.html">Control Protocol</a></li>
                   </ul>
-              </div>
-          </nav>
-            <div class="header-three-socials">
-              <a href="https://twitter.com/VictoryChain_io"><i class="fa-brands fa-twitter"></i></a>
-              <a href="https://discord.gg/Zyr4BdxShA"><i class="fa-brands fa-discord"></i></a>
+                </div>
+              </nav>
             </div>
-          </div>
-
+            <div class="header-three-socials nav-outer">
+                <a href="https://twitter.com/VictoryChain_io"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://discord.gg/Zyr4BdxShA"><i class="fa-brands fa-discord"></i></a>
+            </div>
+          <!-- Main Menu End-->
           <div class="outer-box d-flex align-items-center flex-wrap">
+
+            
+
             <!-- Mobile Navigation Toggler -->
-            <div class="mobile-nav-toggler" style="display: none;">
+            <div class="mobile-nav-toggler">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
             </div>
+
           </div>
+          
         </div>
       </div>
     </div>
   </div>
-  <!--End Header Lower-->
+
 		
 		<!-- Mobile Menu  -->
 		<div class="mobile-menu">
 			<div class="menu-backdrop"></div>
-			<div class="close-btn"><span class="icon fa-solid fa-xmark fa-fw"></span></div>
+			<div class="close-btn">
+				<span class="icon fa-solid fa-xmark fa-fw"></span>
+			</div>
 			
 			<nav class="menu-box">
-				<div class="nav-logo"><a href="index.html"><img src="assets/images/mobile-logo.svg" alt="" title=""></a></div>
-				<div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+				<div class="nav-logo">
+					<a href="index.html">
+						<img src="assets/images/victoryLong.png" alt="" title="">
+					</a>
+				</div>
+				<div class="menu-outer">
+				</div>
+				<!-- Add social icons -->
+				<div class="header-three-socials" style="margin-top: 30px; text-align: center;">
+					<a href="https://twitter.com/VictoryChain_io"><i class="fa-brands fa-twitter"></i></a>
+					<a href="https://discord.gg/Zyr4BdxShA"><i class="fa-brands fa-discord"></i></a>
+				</div>
 			</nav>
 		</div>
 		<!-- End Mobile Menu -->

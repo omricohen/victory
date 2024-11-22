@@ -72,11 +72,8 @@
 
 
 .logo-box {
-	width: 100% !important;
     /* background: pink; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+   
 }
 .logo-box .logo {
 	width: 200px;
