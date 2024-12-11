@@ -8486,3 +8486,89 @@
         text-align: left;
     }
 }
+
+/* Update hero title responsiveness */
+@media screen and (max-width: 768px) {
+    .tokenomics-hero h1 {
+        font-size: 2.5rem !important; /* Reduce from 4rem */
+        margin-bottom: 20px;
+    }
+    
+    .tokenomics-hero h2 {
+        font-size: 1.8rem !important; /* Reduce from 2.5rem */
+    }
+    
+    .tokenomics-hero p {
+        font-size: 1rem !important; /* Reduce from 1.2rem */
+        padding: 0 15px;
+    }
+
+    /* Adjust Sustainable Growth stats for mobile */
+    .growth-stats .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .growth-stats .col-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .growth-stats h3 {
+        font-size: 2rem; /* Reduce from 2.5rem */
+    }
+
+    /* Fix roadmap timeline for mobile */
+    .timeline-container::after {
+        left: 31px; /* Adjust center line position */
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    .timeline-item:nth-child(odd)::after,
+    .timeline-item:nth-child(even)::after {
+        left: 15px;
+        right: auto;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-icon,
+    .timeline-item:nth-child(even) .timeline-icon {
+        left: 10px;
+        right: auto;
+        top: 60px;
+    }
+
+    .timeline-content {
+        padding: 15px;
+    }
+    .timeline-item::after {
+      visibility: hidden;
+    }
+}
+
+/* Additional mobile adjustments for very small screens */
+@media screen and (max-width: 480px) {
+    .tokenomics-hero h1 {
+        font-size: 2rem !important;
+    }
+
+    .tokenomics-hero h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .growth-stats h3 {
+        font-size: 1.8rem;
+    }
+
+    .growth-stats p {
+        font-size: 0.8rem;
+    }
+}
