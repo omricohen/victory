@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Outer Ring -->
+    <circle cx="400" cy="400" r="380" stroke="#FF3E3E" stroke-width="4" stroke-opacity="0.3"/>
+    
+    <!-- Middle Ring with Tech Pattern -->
+    <circle cx="400" cy="400" r="300" stroke="#FF3E3E" stroke-width="2" stroke-opacity="0.2"/>
+    <path d="M400 100 L400 150" stroke="#FF3E3E" stroke-width="2" stroke-opacity="0.2"/>
+    <path d="M400 650 L400 700" stroke="#FF3E3E" stroke-width="2" stroke-opacity="0.2"/>
+    <path d="M100 400 L150 400" stroke="#FF3E3E" stroke-width="2" stroke-opacity="0.2"/>
+    <path d="M650 400 L700 400" stroke="#FF3E3E" stroke-width="2" stroke-opacity="0.2"/>
+    
+    <!-- Inner Vault Door -->
+    <circle cx="400" cy="400" r="250" fill="url(#metalGradient)" stroke="#FF3E3E" stroke-width="4"/>
+    
+    <!-- Door Handle -->
+    <circle cx="400" cy="400" r="60" fill="url(#handleGradient)" stroke="#FF3E3E" stroke-width="4"/>
+    <circle cx="400" cy="400" r="40" fill="none" stroke="#FF3E3E" stroke-width="2"/>
+    
+    <!-- Lock Mechanism Details -->
+    <g id="lockDetails">
+        <circle cx="400" cy="400" r="150" fill="none" stroke="#FF3E3E" stroke-width="2" stroke-dasharray="20 10"/>
+        <path d="M400 250 L400 280" stroke="#FF3E3E" stroke-width="4"/>
+        <path d="M400 520 L400 550" stroke="#FF3E3E" stroke-width="4"/>
+        <path d="M250 400 L280 400" stroke="#FF3E3E" stroke-width="4"/>
+        <path d="M520 400 L550 400" stroke="#FF3E3E" stroke-width="4"/>
+    </g>
+    
+    <!-- Tech Circuit Lines -->
+    <g id="circuitLines" stroke="#FF3E3E" stroke-width="1" stroke-opacity="0.3">
+        <path d="M250 250 L270 270"/>
+        <path d="M550 250 L530 270"/>
+        <path d="M250 550 L270 530"/>
+        <path d="M550 550 L530 530"/>
+    </g>
+    
+    <!-- Victory Chain Logo -->
+    <path d="M370 380 L400 440 L430 380" stroke="#FF3E3E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Gradients -->
+    <defs>
+        <linearGradient id="metalGradient" x1="0" y1="0" x2="800" y2="800">
+            <stop offset="0%" stop-color="#2a2a2a"/>
+            <stop offset="50%" stop-color="#1a1a1a"/>
+            <stop offset="100%" stop-color="#000000"/>
+        </linearGradient>
+        
+        <linearGradient id="handleGradient" x1="340" y1="340" x2="460" y2="460">
+            <stop offset="0%" stop-color="#333333"/>
+            <stop offset="100%" stop-color="#1a1a1a"/>
+        </linearGradient>
+    </defs>
+    
+    <style>
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        #lockDetails {
+            transform-origin: 400px 400px;
+            animation: rotate 60s linear infinite;
+        }
+    </style>
+</svg> 

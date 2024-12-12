@@ -1,0 +1,12 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Outer Circle -->
+    <circle cx="40" cy="40" r="38" stroke="#FFD700" stroke-width="2"/>
+    
+    <!-- Token Symbol -->
+    <circle cx="40" cy="40" r="30" fill="#FFD700" fill-opacity="0.1"/>
+    <path d="M40 20C42.6264 20 45.2272 20.5173 47.6537 21.5235C50.0802 22.5297 52.285 24.0086 54.1421 25.8579C55.9993 27.7071 57.4783 29.9119 58.4845 32.3384C59.4906 34.7649 60.0079 37.3657 60.0079 39.9921C60.0079 42.6185 59.4906 45.2193 58.4845 47.6458C57.4783 50.0723 55.9993 52.2771 54.1421 54.1343C52.285 55.9914 50.0802 57.4704 47.6537 58.4765C45.2272 59.4827 42.6264 60 40 60" 
+          stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- V Symbol -->
+    <path d="M30 30L40 50L50 30" stroke="#FFD700" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> 

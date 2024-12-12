@@ -426,22 +426,21 @@
     text-transform: uppercase;
 }
 
-/* .main-header .main-menu .navigation > li.dropdown > a:before{
-	position: absolute;
+.main-header .main-menu .navigation > li.dropdown > a:before {
+    position: absolute;
     content: "\2b";
     right: 0px;
-	font-weight:800;
-	font-size:10px;
-	transition:all 500ms ease;
-	-moz-transition:all 500ms ease;
-	-webkit-transition:all 500ms ease;
-	-ms-transition:all 500ms ease;
-	-o-transition:all 500ms ease;
-	/* font-family: 'Font Awesome 6 Free'; */
-} */
+    font-weight: 800;
+    font-size: 10px;
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+}
 
-.main-header .main-menu .navigation > li.dropdown:hover > a:before{
-	transform: rotate(45deg);
+.main-header .main-menu .navigation > li.dropdown:hover > a:before {
+    transform: rotate(45deg);
 }
 
 .main-header.fixed-header .header-lower{
@@ -1275,3 +1274,15 @@
 .mobile-menu .navigation > li:nth-child(3) {transition-delay: 0.06s;}
 .mobile-menu .navigation > li:nth-child(4) {transition-delay: 0.08s;}
 .mobile-menu .navigation > li:nth-child(5) {transition-delay: 0.10s;}
+
+.nav-menu a[href*="victory-vault"] {
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: text-shadow 0.3s ease;
+}
+
+.nav-menu a[href*="victory-vault"]:hover {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
