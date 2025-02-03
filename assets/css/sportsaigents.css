@@ -1,0 +1,594 @@
+/* SportsAigents Specific Styles */
+
+/* Hero Section */
+.sportsaigents-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 180px 0;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 62, 62, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+}
+
+.hero-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(255, 62, 62, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 75% 75%, rgba(255, 62, 62, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: particleFloat 20s linear infinite;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50px);
+    }
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 62, 62, 0.1);
+    border: 1px solid rgba(255, 62, 62, 0.3);
+    padding: 8px 16px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+}
+
+.hero-badge .badge-icon {
+    color: #FF3E3E;
+    margin-right: 8px;
+}
+
+.hero-badge .badge-text {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero-subtitle {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    opacity: 0.9;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.btn-glow {
+    background: #FF3E3E;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(255, 62, 62, 0.4);
+}
+
+.btn-glow::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: rotate(45deg);
+    animation: glowEffect 2s linear infinite;
+}
+
+@keyframes glowEffect {
+    0% {
+        transform: rotate(45deg) translateX(-100%);
+    }
+    100% {
+        transform: rotate(45deg) translateX(100%);
+    }
+}
+
+.btn-outline {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 62, 62, 0.5);
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: rgba(255, 62, 62, 0.1);
+    border-color: #FF3E3E;
+    transform: translateY(-2px);
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FF3E3E;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: #ffffff;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.hero-shapes .shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.15;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    background: #FF3E3E;
+    top: -100px;
+    left: -100px;
+    animation: shapeFloat 8s ease-in-out infinite;
+}
+
+.shape-2 {
+    width: 200px;
+    height: 200px;
+    background: #FF3E3E;
+    bottom: -50px;
+    right: -50px;
+    animation: shapeFloat 6s ease-in-out infinite reverse;
+}
+
+.shape-3 {
+    width: 150px;
+    height: 150px;
+    background: #FF3E3E;
+    top: 50%;
+    right: 15%;
+    animation: shapeFloat 7s ease-in-out infinite;
+}
+
+@keyframes shapeFloat {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, -20px);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 2rem;
+    }
+    
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Victorai Section */
+.victorai-section {
+    position: relative;
+}
+
+.victorai-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.victorai-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #FF3E3E;
+}
+
+.victorai-content p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.victorai-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.victorai-features .feature {
+    background: rgba(255,62,62,0.1);
+    padding: 15px;
+    border-radius: 10px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.victorai-features .feature i {
+    color: #FF3E3E;
+    font-size: 1.2rem;
+}
+
+/* Features Grid */
+.feature-card {
+    background: rgba(255,62,62,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,62,62,0.15);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: #FF3E3E;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Token System */
+.token-card {
+    background: rgba(255,62,62,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.token-card:hover {
+    background: rgba(255,62,62,0.15);
+}
+
+.token-card .token-icon {
+    font-size: 2.5rem;
+    color: #FF3E3E;
+    margin-bottom: 20px;
+}
+
+.token-card h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.token-card h4 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.token-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.token-card ul li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.token-card ul li i {
+    color: #FF3E3E;
+}
+
+/* Beyond Betting */
+.feature-box {
+    background: rgba(255,62,62,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+    height: 100%;
+}
+
+.feature-box:hover {
+    background: rgba(255,62,62,0.15);
+}
+
+.feature-box i {
+    font-size: 2.5rem;
+    color: #FF3E3E;
+    margin-bottom: 20px;
+}
+
+.feature-box h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.feature-box p {
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Section Titles */
+.sec-title_heading {
+    color: #ffffff;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.sec-title_text {
+    color: #ffffff;
+    opacity: 0.9;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Animation Effects */
+.feature-card, .token-card, .feature-box {
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover, .token-card:hover, .feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 62, 62, 0.1);
+}
+
+/* Image Placeholder Animation */
+.image-placeholder {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-placeholder i {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Victorai Image Styling */
+.victorai-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #1a1a1a, #000000);
+}
+
+.victorai-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(255, 62, 62, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(255, 62, 62, 0.05) 0%, transparent 50%);
+    z-index: 1;
+}
+
+.victorai-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(45deg, transparent 45%, rgba(255, 62, 62, 0.1) 49%, rgba(255, 62, 62, 0.1) 51%, transparent 55%),
+        linear-gradient(-45deg, transparent 45%, rgba(255, 62, 62, 0.1) 49%, rgba(255, 62, 62, 0.1) 51%, transparent 55%);
+    background-size: 30px 30px;
+    opacity: 0.3;
+    animation: patternMove 20s linear infinite;
+    z-index: 2;
+}
+
+.victorai-image img {
+    position: relative;
+    z-index: 3;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 10px rgba(255, 62, 62, 0.3));
+}
+
+.victorai-image .data-points {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.data-point {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #FF3E3E;
+    border-radius: 50%;
+    animation: dataFloat 3s ease-in-out infinite;
+    box-shadow: 0 0 10px #FF3E3E, 0 0 20px #FF3E3E;
+    opacity: 0.8;
+}
+
+.data-line {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent,
+        rgba(255, 62, 62, 0.8) 20%,
+        #FF3E3E 50%,
+        rgba(255, 62, 62, 0.8) 80%,
+        transparent
+    );
+    box-shadow: 0 0 10px rgba(255, 62, 62, 0.5);
+    animation: lineFloat 15s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes patternMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100px 100px;
+    }
+}
+
+@keyframes dataFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-20px) scale(1.2);
+        opacity: 1;
+    }
+}
+
+@keyframes lineFloat {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+} 
